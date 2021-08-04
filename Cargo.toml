@@ -21,8 +21,7 @@ default = [
 ]
 
 [dependencies]
-winit = {version = "0.25", features = ["web-sys"]}
-bevy = { git = "https://github.com/bevyengine/bevy", default-features=false }
+winit = { version = "0.25", features = ["web-sys"] }
 
 regex = "1.5"
 cfg-if = "1.0"
@@ -46,6 +45,14 @@ web-sys = {version = "0.3", features = [
   'WebGlVertexArrayObject',
   'WebGlSync',
 ]}
+
+[dependencies.bevy]
+version = "0.5"
+# path = "../bevy"
+git = "https://github.com/bevyengine/bevy.git"
+rev = "a89a954a1706bcffa497309388b993ff82016829"
+# branch = "main"
+default-features = false
 
 [dev-dependencies]
 compile-time-run = "0.2"

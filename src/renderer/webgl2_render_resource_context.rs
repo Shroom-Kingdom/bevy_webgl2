@@ -99,8 +99,7 @@ impl WebGL2RenderResourceContext {
             .get_context_with_context_options("webgl2", &ctx_options)
             .unwrap()
             .unwrap()
-            .dyn_into::<web_sys::WebGl2RenderingContext>()
-            .unwrap();
+            .unchecked_into::<web_sys::WebGl2RenderingContext>();
 
         let uniform_buffer_offset_alignment = gl
             .get_parameter(Gl::UNIFORM_BUFFER_OFFSET_ALIGNMENT)
